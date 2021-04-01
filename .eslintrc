@@ -1,0 +1,93 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 2018,
+    "sourceType": "module"
+  },
+  "plugins": [
+    "react",
+    "@typescript-eslint",
+    "prettier"
+  ],
+  "extends": [
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended",
+    "airbnb",
+    "plugin:prettier/recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "rules": {
+    // Fix 'React was used before it was defined'
+    "no-use-before-define": "off",
+    "@typescript-eslint/no-use-before-define": [
+      "warn"
+    ],
+    // Fix 'React was used before it was defined'
+    "prettier/prettier": "warn",
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "js": "never",
+        "jsx": "never",
+        "ts": "never",
+        "tsx": "never"
+      }
+    ],
+    "react/jsx-filename-extension": [
+      1,
+      {
+        "extensions": [
+          ".js",
+          ".jsx",
+          ".ts",
+          ".tsx"
+        ]
+      }
+    ],
+    // Additional Rules
+    "no-console": "off",
+    "@typescript-eslint/no-unused-vars": "warn",
+    "import/prefer-default-export": "off",
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": true
+      }
+    ],
+    "jsx-a11y/interactive-supports-focus": "off",
+    "jsx-a11y/click-events-have-key-events": "off",
+    "react/jsx-curly-newline": "off",
+    "prefer-destructuring": "off",
+    "react/require-default-props": "warn",
+    "consistent-return": "warn",
+    "no-param-reassign": "warn",
+    "no-undef-init": "warn",
+    "react/jsx-props-no-spreading": "warn",
+    "react/prop-types": "off",
+    "react/destructuring-assignment": "warn",
+    
+    // Typescript
+    "@typescript-eslint/no-empty-function": "warn",
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+
+    // BUGS
+    "no-shadow": "off"
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [
+          ".js",
+          ".jsx",
+          ".ts",
+          ".tsx"
+        ]
+      }
+    }
+  }
+}

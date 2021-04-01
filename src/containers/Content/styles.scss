@@ -1,0 +1,27 @@
+.notes-wrapper.sort-type--column {
+  align-content: start;
+  animation: noteAppear 0.2s ease-in;
+}
+
+/* Cloned animation is used for tricking CSS that 2 elements don't have the same properties */
+.notes-wrapper.sort-type--square {
+  grid-template-columns: repeat(2, 1fr);
+  animation: clonedNoteAppear 0.2s ease-in;
+}
+
+@keyframes noteAppear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes clonedNoteAppear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
