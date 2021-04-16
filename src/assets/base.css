@@ -1,0 +1,27 @@
+@import '~normalize.css';
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+}
+
+input, div, button, a {
+  background-color: transparent;
+  outline: none;
+  border: none;
+}
+
+div::-webkit-scrollbar {
+  display: none;
+}
+
+li {
+  list-style: none;
+}
